@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+   <!-- 按下状态 -->
+   <item android:state_pressed="true"  >
+
+         <shape>
+            <corners android:radius="1dp" />
+            <solid android:color="#8027A4C6" />
+            <size android:width="1dp" android:height="15dp"/>
+         </shape>
+
+   </item>
+
+   <!-- 普通无焦点状态 -->
+   <item android:state_focused="false" android:state_pressed="false"
+       >
+       <shape>
+           <corners android:radius="1dp" />
+           <solid android:color="#09F6E0" />
+           <size android:width="1dp" android:height="15dp"/>
+       </shape>
+   </item>
+</selector>

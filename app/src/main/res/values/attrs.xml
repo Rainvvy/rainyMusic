@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundShadowLayout">
+        <!-- width / height = ratio（float类型） -->
+        <!--<attr name="ratio" format="float" />-->
+        <!-- 边框宽度（dp、px等等） -->
+        <attr name="strokeWidth" format="dimension" />
+        <!-- 边框颜色（资源ID\颜色值）-->
+        <attr name="strokeColor" format="color" />
+        <!-- 圆角半径（dp、px等等） -->
+        <attr name="radius" format="dimension" />
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+        <!-- 阴影半径（dp、px等等）-->
+        <attr name="shadowRadius" format="dimension" />
+        <!-- 阴影颜色（资源ID\颜色值）-->
+        <attr name="shadowColor" format="color" />
+        <!-- 阴影偏移（dp、px等等）-->
+        <attr name="shadow_x" format="dimension" />
+        <!-- 阴影偏移（dp、px等等）-->
+        <attr name="shadow_y" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="pile">
+        <attr name="interval" format="dimension" />
+        <attr name="sizeRatio" format="float" />
+        <attr name="scaleStep" format="float" />
+        <attr name="displayCount" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="scene">
+        <attr name="leftMargin" format="dimension" />
+        <attr name="leftDistance" format="dimension" />
+        <attr name="rightDistance" format="dimension" />
+        <attr name="verticalDistance" format="dimension" />
+        <attr name="textSize" format="float" />
+        <attr name="textColor" format="color" />
+        <attr name="isRound" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="PlayPauseView">
+        <attr name="bg_color" format="color"/>
+        <attr name="btn_color" format="color"/>
+        <attr name="gap_width" format="dimension|reference"/>
+        <attr name="space_padding" format="dimension|reference"/>
+        <attr name="anim_duration" format="integer"/>
+        <attr name="anim_direction">
+            <enum name="positive" value="1"/>
+            <enum name="negative" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.rainy.rainymusic"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {exclude 'META-INF/rxjava.properties'}
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    //glide 加载
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    //圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//转换器，请求结果转换成Model,配合Rxjava 使用
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    //okhttp日志
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //获取 网页cookie  一般配合jsoup 使用
+    implementation 'xyz.nulldev.huandroid:huandroid:2.30.01'
+
+    //音视频缓存
+    implementation 'com.danikula:videocache:2.7.1'
+
+    //下载文件
+    implementation 'com.arialyy.aria:core:3.8.15'
+    annotationProcessor 'com.arialyy.aria:compiler:3.8.15'
+
+
+}

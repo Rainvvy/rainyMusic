@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pile="http://schemas.android.com/apk/res-auto"
+    xmlns:scene="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/musicbg_gradient"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/positionView"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.rainy.rainymusic.widget.HorizontalTransitionLayout
+            android:id="@+id/musicName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            scene:leftDistance="100dp"
+            scene:leftMargin="20dp"
+            scene:rightDistance="100dp"
+            scene:textColor="#424242"
+            scene:textSize="22" />
+
+
+        <com.rainy.rainymusic.widget.HorizontalTransitionLayout
+            android:id="@+id/temperatureView"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            scene:leftDistance="60dp"
+            scene:leftMargin="33dp"
+            scene:rightDistance="60dp"
+            scene:textColor="#ffffff"
+            scene:textSize="15">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="38dp"
+                android:visibility="invisible"
+                android:layout_gravity="center_vertical|right"
+                android:src="@mipmap/right" />
+
+        </com.rainy.rainymusic.widget.HorizontalTransitionLayout>
+
+
+    </LinearLayout>
+
+    <com.rainy.rainymusic.widget.PileLayout
+        android:id="@+id/pileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        pile:displayCount="1.4"
+        pile:interval="10dp"
+        pile:scaleStep="0.32"
+        pile:sizeRatio="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/comment" />
+
+        <com.rainy.rainymusic.widget.VerticalTransitionLayout
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            scene:textColor="#555"
+            scene:textSize="18"
+            scene:verticalDistance="15dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/headImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    app:riv_corner_radius="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/comment_nickName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rainy"
+                            android:textSize="14sp"
+                            android:textColor="#6A6464"
+                            />
+                        <TextView
+                            android:id="@+id/comment_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12月20日"
+                            android:layout_marginTop="2dp"
+                            android:textSize="10sp"
+                            android:textColor="#8FB3B2B2"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:id="@+id/comment_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:textColor="#bfbfbf"
+                            android:layout_marginRight="5dp"
+                            android:text="817"/>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/thumb"/>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/comment_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:layout_marginTop="5dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="经历过，过往，过程，过去....以前，家圣诞节卡数据库阿克苏的借记卡和按时卡上卡即可撒收到货家世界安徽省就开会卡上阿斯加德哈时间的话骄傲圣诞节按时就"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        android:background="#ddd" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.rainy.rainymusic.widget.FadeTransitionImageView
+            android:id="@+id/bottomImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+        <com.rainy.rainymusic.widget.LyricView
+            android:id="@+id/lyricView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/white_gradient"-->
+<!--             />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/clock" />
+
+            <com.rainy.rainymusic.widget.VerticalTransitionLayout
+                android:id="@+id/timeView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                scene:textColor="#888"
+                scene:textSize="13"
+                scene:verticalDistance="25dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
